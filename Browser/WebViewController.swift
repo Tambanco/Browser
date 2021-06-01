@@ -9,9 +9,11 @@ import UIKit
 import WebKit
 class WebViewController: UIViewController, WKUIDelegate {
     
+    var webView: WKWebView!
+    var progressView: UIProgressView!
+    
     var textFromMainVC: String = ""
     
-    var webView: WKWebView!
     
     // MARK: - Life cycle
     override func loadView() {
@@ -32,8 +34,16 @@ class WebViewController: UIViewController, WKUIDelegate {
         
         webView.allowsBackForwardNavigationGestures = true
         
+        webView.addObserver(self, forKeyPath: #keyPath(WKWebView.estimatedProgress), options: .new, context: nil)
+        
         confugureNavBar()
         confugureToolBar()
+    }
+    
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "estimatedProgress" {
+            progressView.progress = Float(webView.estimatedProgress)
+        }
     }
 }
 
@@ -48,7 +58,6 @@ extension WebViewController {
         let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
         self.navigationItem.leftBarButtonItem  = doneBarButtonItem
     }
-    
     
     @objc func refreshButtonTapped() {
         webView.reload()
@@ -68,7 +77,11 @@ extension WebViewController {
         let backButton = UIBarButtonItem(image: chevronLeft, style: .plain, target: webView, action: #selector(webView!.goBack))
         let forwardButton = UIBarButtonItem(image: chevronRight, style: .plain, target: webView, action: #selector(webView!.goForward))
         
-        toolbarItems = [backButton, spacer, forwardButton]
+        progressView = UIProgressView(progressViewStyle: .default)
+        progressView.sizeToFit()
+        let progressButton = UIBarButtonItem(customView: progressView)
+
+        toolbarItems = [backButton, spacer, progressButton, spacer, forwardButton]
         navigationController?.isToolbarHidden = false
     }
 }
