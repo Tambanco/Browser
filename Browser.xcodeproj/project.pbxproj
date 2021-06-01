@@ -19,6 +19,10 @@
 		498A5C90266646250034221B /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C8F266646250034221B /* WebViewControllerTests.swift */; };
 		498A5C94266650A40034221B /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C93266650A40034221B /* Animation.swift */; };
 		498A5C96266650DF0034221B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C95266650DF0034221B /* Labels.swift */; };
+		498A5C98266651310034221B /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C97266651310034221B /* Buttons.swift */; };
+		498A5C9A266651610034221B /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C99266651610034221B /* Keyboard.swift */; };
+		498A5C9D266651FD0034221B /* NavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C9C266651FD0034221B /* NavBar.swift */; };
+		498A5C9F266652250034221B /* ToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C9E266652250034221B /* ToolBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +52,10 @@
 		498A5C8F266646250034221B /* WebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
 		498A5C93266650A40034221B /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		498A5C95266650DF0034221B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
+		498A5C97266651310034221B /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		498A5C99266651610034221B /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		498A5C9C266651FD0034221B /* NavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBar.swift; sourceTree = "<group>"; };
+		498A5C9E266652250034221B /* ToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,8 +101,7 @@
 				498A5C6B266630660034221B /* SceneDelegate.swift */,
 				498A5C92266647230034221B /* Controller */,
 				498A5C6F266630660034221B /* Main.storyboard */,
-				498A5C93266650A40034221B /* Animation.swift */,
-				498A5C95266650DF0034221B /* Labels.swift */,
+				498A5C9B266651BF0034221B /* Extensions */,
 				498A5C72266630680034221B /* Assets.xcassets */,
 				498A5C74266630680034221B /* LaunchScreen.storyboard */,
 				498A5C77266630680034221B /* Info.plist */,
@@ -128,6 +135,35 @@
 				498A5C7D266634240034221B /* WebViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		498A5C9B266651BF0034221B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				498A5CA0266653340034221B /* MainView */,
+				498A5CA1266653430034221B /* WebView */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		498A5CA0266653340034221B /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				498A5C93266650A40034221B /* Animation.swift */,
+				498A5C95266650DF0034221B /* Labels.swift */,
+				498A5C97266651310034221B /* Buttons.swift */,
+				498A5C99266651610034221B /* Keyboard.swift */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		498A5CA1266653430034221B /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				498A5C9C266651FD0034221B /* NavBar.swift */,
+				498A5C9E266652250034221B /* ToolBar.swift */,
+			);
+			path = WebView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,10 +266,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				498A5C98266651310034221B /* Buttons.swift in Sources */,
 				498A5C6E266630660034221B /* MainViewController.swift in Sources */,
+				498A5C9D266651FD0034221B /* NavBar.swift in Sources */,
+				498A5C9A266651610034221B /* Keyboard.swift in Sources */,
 				498A5C6A266630660034221B /* AppDelegate.swift in Sources */,
 				498A5C96266650DF0034221B /* Labels.swift in Sources */,
 				498A5C6C266630660034221B /* SceneDelegate.swift in Sources */,
+				498A5C9F266652250034221B /* ToolBar.swift in Sources */,
 				498A5C94266650A40034221B /* Animation.swift in Sources */,
 				498A5C7E266634240034221B /* WebViewController.swift in Sources */,
 			);
