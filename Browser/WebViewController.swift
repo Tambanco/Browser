@@ -62,7 +62,14 @@ extension WebViewController {
 // MARK: - ToolBar configurator
 extension WebViewController {
     func confugureToolBar() {
+        let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        let chevronLeft = UIImage(systemName: "chevron.left")
+        let chevronRight = UIImage(systemName: "chevron.right")
+        let backButton = UIBarButtonItem(image: chevronLeft, style: .plain, target: webView, action: #selector(webView!.goBack))
+        let forwardButton = UIBarButtonItem(image: chevronRight, style: .plain, target: webView, action: #selector(webView!.goForward))
         
+        toolbarItems = [backButton, spacer, forwardButton]
+        navigationController?.isToolbarHidden = false
     }
 }
 
