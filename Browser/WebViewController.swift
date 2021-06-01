@@ -11,7 +11,6 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
     var progressView: UIProgressView!
-    
     var textFromMainVC: String = ""
     
     

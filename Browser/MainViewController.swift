@@ -116,14 +116,13 @@ extension MainViewController
         
         elementAnimator(loginButton)
         self.view.addSubview(loginButton)
-        
     }
     
     @objc func buttonTapped(sender : UIButton)
     {
         let webVC = self.storyboard!.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
         let navController = UINavigationController(rootViewController: webVC)
-        
+        navController.modalPresentationStyle = .fullScreen
         if textForRequest.contains("https://") {
             webVC.textFromMainVC = textForRequest
         } else {
