@@ -13,6 +13,7 @@ class WebViewController: UIViewController, WKUIDelegate {
     
     var webView: WKWebView!
     
+    // MARK: - Life cycle
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
@@ -28,5 +29,7 @@ class WebViewController: UIViewController, WKUIDelegate {
         let myURL = URL(string: textFromMainVC)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
+        
+        self.navigationController?.hidesBarsOnSwipe = true
     }
 }
