@@ -9,9 +9,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
+    // MARK: - Properties
     var requestTextField: UITextField!
     var textForRequest: String = ""
     
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,7 +25,7 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: - Animation methods
+    // MARK: - Animation methods
 extension MainViewController
 {
     func elementAnimator(_ element: UIView)
@@ -49,7 +51,7 @@ extension MainViewController
 }
 
 
-// MARK: - Label configurator
+    // MARK: - Label configurator
 extension MainViewController
 {
     func configureLabels()
@@ -94,7 +96,7 @@ extension MainViewController
     }
 }
 
-// MARK: - Button configurator
+    // MARK: - Button configurator
 extension MainViewController
 {
     func  configureButtons()
@@ -133,25 +135,25 @@ extension MainViewController
     }
 }
 
-// MARK: - Dismiss keyboard methods
+    // MARK: - Dismiss keyboard methods
 extension MainViewController
 {
-@objc func keyboardWillShow(notification: NSNotification)
-{
-    if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
+    @objc func keyboardWillShow(notification: NSNotification)
     {
-        if self.view.frame.origin.y == 0
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue
         {
-            self.view.frame.origin.y -= keyboardSize.height
+            if self.view.frame.origin.y == 0
+            {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
         }
     }
-}
-
-@objc func keyboardWillHide(notification: NSNotification)
-{
-    if self.view.frame.origin.y != 0
+    
+    @objc func keyboardWillHide(notification: NSNotification)
     {
-        self.view.frame.origin.y = 0
+        if self.view.frame.origin.y != 0
+        {
+            self.view.frame.origin.y = 0
+        }
     }
-}
 }

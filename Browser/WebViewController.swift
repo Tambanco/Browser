@@ -9,6 +9,7 @@ import UIKit
 import WebKit
 class WebViewController: UIViewController, WKUIDelegate {
     
+    // MARK: - Properties
     var webView: WKWebView!
     var progressView: UIProgressView!
     var textFromMainVC: String = ""
@@ -46,7 +47,7 @@ class WebViewController: UIViewController, WKUIDelegate {
     }
 }
 
-// MARK: - NavBar configurator
+    // MARK: - NavBar configurator
 extension WebViewController {
     func confugureNavBar() {
         self.navigationController?.hidesBarsOnSwipe = true
@@ -61,13 +62,13 @@ extension WebViewController {
     @objc func refreshButtonTapped() {
         webView.reload()
     }
-
+    
     @objc func doneButtonTapped() {
         dismiss(animated: true, completion: nil)
     }
 }
 
-// MARK: - ToolBar configurator
+    // MARK: - ToolBar configurator
 extension WebViewController {
     func confugureToolBar() {
         let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
@@ -79,7 +80,7 @@ extension WebViewController {
         progressView = UIProgressView(progressViewStyle: .default)
         progressView.sizeToFit()
         let progressButton = UIBarButtonItem(customView: progressView)
-
+        
         toolbarItems = [backButton, spacer, progressButton, spacer, forwardButton]
         navigationController?.isToolbarHidden = false
     }

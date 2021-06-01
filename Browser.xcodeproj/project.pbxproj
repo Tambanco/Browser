@@ -14,7 +14,20 @@
 		498A5C73266630680034221B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 498A5C72266630680034221B /* Assets.xcassets */; };
 		498A5C76266630680034221B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 498A5C74266630680034221B /* LaunchScreen.storyboard */; };
 		498A5C7E266634240034221B /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C7D266634240034221B /* WebViewController.swift */; };
+		498A5C86266645CE0034221B /* BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C85266645CE0034221B /* BrowserTests.swift */; };
+		498A5C8E2666460F0034221B /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C8D2666460F0034221B /* MainViewControllerTests.swift */; };
+		498A5C90266646250034221B /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C8F266646250034221B /* WebViewControllerTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		498A5C88266645CE0034221B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 498A5C5E266630660034221B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 498A5C65266630660034221B;
+			remoteInfo = Browser;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		498A5C66266630660034221B /* Browser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Browser.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -26,10 +39,22 @@
 		498A5C75266630680034221B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		498A5C77266630680034221B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498A5C7D266634240034221B /* WebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		498A5C83266645CE0034221B /* BrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		498A5C85266645CE0034221B /* BrowserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserTests.swift; sourceTree = "<group>"; };
+		498A5C87266645CE0034221B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		498A5C8D2666460F0034221B /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
+		498A5C8F266646250034221B /* WebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		498A5C63266630660034221B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		498A5C80266645CE0034221B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -43,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				498A5C68266630660034221B /* Browser */,
+				498A5C84266645CE0034221B /* BrowserTests */,
 				498A5C67266630660034221B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				498A5C66266630660034221B /* Browser.app */,
+				498A5C83266645CE0034221B /* BrowserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +95,25 @@
 				498A5C77266630680034221B /* Info.plist */,
 			);
 			path = Browser;
+			sourceTree = "<group>";
+		};
+		498A5C84266645CE0034221B /* BrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				498A5C85266645CE0034221B /* BrowserTests.swift */,
+				498A5C87266645CE0034221B /* Info.plist */,
+				498A5C91266646300034221B /* Controller */,
+			);
+			path = BrowserTests;
+			sourceTree = "<group>";
+		};
+		498A5C91266646300034221B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				498A5C8D2666460F0034221B /* MainViewControllerTests.swift */,
+				498A5C8F266646250034221B /* WebViewControllerTests.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -90,6 +136,24 @@
 			productReference = 498A5C66266630660034221B /* Browser.app */;
 			productType = "com.apple.product-type.application";
 		};
+		498A5C82266645CE0034221B /* BrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 498A5C8A266645CE0034221B /* Build configuration list for PBXNativeTarget "BrowserTests" */;
+			buildPhases = (
+				498A5C7F266645CE0034221B /* Sources */,
+				498A5C80266645CE0034221B /* Frameworks */,
+				498A5C81266645CE0034221B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				498A5C89266645CE0034221B /* PBXTargetDependency */,
+			);
+			name = BrowserTests;
+			productName = BrowserTests;
+			productReference = 498A5C83266645CE0034221B /* BrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -101,6 +165,10 @@
 				TargetAttributes = {
 					498A5C65266630660034221B = {
 						CreatedOnToolsVersion = 12.5;
+					};
+					498A5C82266645CE0034221B = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 498A5C65266630660034221B;
 					};
 				};
 			};
@@ -118,6 +186,7 @@
 			projectRoot = "";
 			targets = (
 				498A5C65266630660034221B /* Browser */,
+				498A5C82266645CE0034221B /* BrowserTests */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +199,13 @@
 				498A5C76266630680034221B /* LaunchScreen.storyboard in Resources */,
 				498A5C73266630680034221B /* Assets.xcassets in Resources */,
 				498A5C71266630660034221B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		498A5C81266645CE0034221B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +223,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		498A5C7F266645CE0034221B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				498A5C86266645CE0034221B /* BrowserTests.swift in Sources */,
+				498A5C90266646250034221B /* WebViewControllerTests.swift in Sources */,
+				498A5C8E2666460F0034221B /* MainViewControllerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		498A5C89266645CE0034221B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 498A5C65266630660034221B /* Browser */;
+			targetProxy = 498A5C88266645CE0034221B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		498A5C6F266630660034221B /* Main.storyboard */ = {
@@ -323,6 +417,46 @@
 			};
 			name = Release;
 		};
+		498A5C8B266645CE0034221B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LU2BMBADH;
+				INFOPLIST_FILE = BrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tambanco.BrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Browser.app/Browser";
+			};
+			name = Debug;
+		};
+		498A5C8C266645CE0034221B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LU2BMBADH;
+				INFOPLIST_FILE = BrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Tambanco.BrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Browser.app/Browser";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -340,6 +474,15 @@
 			buildConfigurations = (
 				498A5C7B266630680034221B /* Debug */,
 				498A5C7C266630680034221B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		498A5C8A266645CE0034221B /* Build configuration list for PBXNativeTarget "BrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				498A5C8B266645CE0034221B /* Debug */,
+				498A5C8C266645CE0034221B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
