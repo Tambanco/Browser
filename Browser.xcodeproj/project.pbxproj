@@ -17,6 +17,8 @@
 		498A5C86266645CE0034221B /* BrowserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C85266645CE0034221B /* BrowserTests.swift */; };
 		498A5C8E2666460F0034221B /* MainViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C8D2666460F0034221B /* MainViewControllerTests.swift */; };
 		498A5C90266646250034221B /* WebViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C8F266646250034221B /* WebViewControllerTests.swift */; };
+		498A5C94266650A40034221B /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C93266650A40034221B /* Animation.swift */; };
+		498A5C96266650DF0034221B /* Labels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498A5C95266650DF0034221B /* Labels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		498A5C87266645CE0034221B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		498A5C8D2666460F0034221B /* MainViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerTests.swift; sourceTree = "<group>"; };
 		498A5C8F266646250034221B /* WebViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewControllerTests.swift; sourceTree = "<group>"; };
+		498A5C93266650A40034221B /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		498A5C95266650DF0034221B /* Labels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Labels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,8 @@
 				498A5C6B266630660034221B /* SceneDelegate.swift */,
 				498A5C92266647230034221B /* Controller */,
 				498A5C6F266630660034221B /* Main.storyboard */,
+				498A5C93266650A40034221B /* Animation.swift */,
+				498A5C95266650DF0034221B /* Labels.swift */,
 				498A5C72266630680034221B /* Assets.xcassets */,
 				498A5C74266630680034221B /* LaunchScreen.storyboard */,
 				498A5C77266630680034221B /* Info.plist */,
@@ -226,7 +232,9 @@
 			files = (
 				498A5C6E266630660034221B /* MainViewController.swift in Sources */,
 				498A5C6A266630660034221B /* AppDelegate.swift in Sources */,
+				498A5C96266650DF0034221B /* Labels.swift in Sources */,
 				498A5C6C266630660034221B /* SceneDelegate.swift in Sources */,
+				498A5C94266650A40034221B /* Animation.swift in Sources */,
 				498A5C7E266634240034221B /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
