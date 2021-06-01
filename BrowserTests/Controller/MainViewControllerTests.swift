@@ -18,14 +18,6 @@ class MainViewControllerTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
     
-    func testThatServiceIsCalled() {
-      let vc = MainViewController()
-      vc.service = serviceMock
-      vc.viewDidLoad()
-
-      XCTAssertTrue(serviceMock.loadCalled)
-    }
-    
     func testViewNotNilWhenViewIsLoaded() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: String(describing: MainViewController.self))
