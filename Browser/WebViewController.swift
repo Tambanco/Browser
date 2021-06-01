@@ -30,6 +30,29 @@ class WebViewController: UIViewController, WKUIDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
         
-        self.navigationController?.hidesBarsOnSwipe = true
+        confugureNavBar()
     }
 }
+
+// MARK: - NavBar configurator
+extension WebViewController {
+    func confugureNavBar() {
+        self.navigationController?.hidesBarsOnSwipe = true
+        
+        let refreshBarButtonItem = UIBarButtonItem(barButtonSystemItem: .refresh, target: self, action: #selector(refreshButtonTapped))
+        self.navigationItem.rightBarButtonItem  = refreshBarButtonItem
+        
+        let doneBarButtonItem = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(doneButtonTapped))
+        self.navigationItem.leftBarButtonItem  = doneBarButtonItem
+    }
+    
+    
+    @objc func refreshButtonTapped() {
+        webView.reload()
+    }
+
+    @objc func doneButtonTapped() {
+        dismiss(animated: true, completion: nil)
+    }
+}
+

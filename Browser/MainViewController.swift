@@ -126,9 +126,10 @@ extension MainViewController
         
         if textForRequest.contains("https://") {
             webVC.textFromMainVC = textForRequest
+        } else {
+            webVC.textFromMainVC = "https://\(textForRequest)"
         }
-        webVC.textFromMainVC = "https://\(textForRequest)"
-        webVC.modalPresentationStyle = .fullScreen
+        
         self.present(navController, animated:true, completion: nil)
     }
 }
