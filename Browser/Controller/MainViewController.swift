@@ -12,17 +12,14 @@ class MainViewController: UIViewController {
     // MARK: - Properties
     var requestTextField: UITextField!
     var textForRequest: String = ""
-    var gradientLayer: CAGradientLayer!
-    {
-        didSet
-        {
+    var gradientLayer: CAGradientLayer! {
+        didSet {
             gradientLayer.startPoint = CGPoint(x: 0, y: 0)
             gradientLayer.endPoint = CGPoint(x: 1, y: 1)
-            let startColor = #colorLiteral(red: 0.2078431373, green: 0.3607843137, blue: 0.4901960784, alpha: 1).cgColor
-            let middleColor = #colorLiteral(red: 0.4235294118, green: 0.3568627451, blue: 0.4823529412, alpha: 1).cgColor
-            let endColor = #colorLiteral(red: 0.7529411765, green: 0.4235294118, blue: 0.5176470588, alpha: 1).cgColor
+            let startColor = #colorLiteral(red: 0.6078431373, green: 0.6862745098, blue: 0.8509803922, alpha: 1).cgColor
+            let middleColor = #colorLiteral(red: 0.262745098, green: 0.6117647059, blue: 0.9843137255, alpha: 1).cgColor
+            let endColor = #colorLiteral(red: 0.9215686275, green: 0.9568627451, blue: 0.9607843137, alpha: 1).cgColor
             gradientLayer.colors = [startColor, middleColor, endColor]
-//            gradientLayer.locations = [0.4, 0.6]
         }
     }
     
@@ -69,7 +66,6 @@ extension MainViewController
         button.layer.add(flash, forKey: nil)
     }
 }
-
 
     // MARK: - Label configurator
 extension MainViewController
