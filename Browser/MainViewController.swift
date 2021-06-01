@@ -21,8 +21,6 @@ class MainViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
-    
 }
 
 // MARK: - Animation methods
@@ -123,7 +121,15 @@ extension MainViewController
     
     @objc func buttonTapped(sender : UIButton)
     {
-        print("dfgdf")
+        let webVC = self.storyboard!.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        let navController = UINavigationController(rootViewController: webVC)
+        
+        if textForRequest.contains("https://") {
+            webVC.textFromMainVC = textForRequest
+        }
+        webVC.textFromMainVC = "https://\(textForRequest)"
+        webVC.modalPresentationStyle = .fullScreen
+        self.present(navController, animated:true, completion: nil)
     }
 }
 

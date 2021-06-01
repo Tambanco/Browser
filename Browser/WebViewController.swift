@@ -9,6 +9,8 @@ import UIKit
 import WebKit
 class WebViewController: UIViewController, WKUIDelegate {
     
+    var textFromMainVC: String = ""
+    
     var webView: WKWebView!
     
     override func loadView() {
@@ -20,7 +22,10 @@ class WebViewController: UIViewController, WKUIDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let myURL = URL(string:"https://www.apple.com")
+        guard textFromMainVC != "" else {
+            return print("Empty request")
+        }
+        let myURL = URL(string: textFromMainVC)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
     }
