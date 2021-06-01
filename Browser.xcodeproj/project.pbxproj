@@ -87,8 +87,7 @@
 			children = (
 				498A5C69266630660034221B /* AppDelegate.swift */,
 				498A5C6B266630660034221B /* SceneDelegate.swift */,
-				498A5C6D266630660034221B /* MainViewController.swift */,
-				498A5C7D266634240034221B /* WebViewController.swift */,
+				498A5C92266647230034221B /* Controller */,
 				498A5C6F266630660034221B /* Main.storyboard */,
 				498A5C72266630680034221B /* Assets.xcassets */,
 				498A5C74266630680034221B /* LaunchScreen.storyboard */,
@@ -112,6 +111,15 @@
 			children = (
 				498A5C8D2666460F0034221B /* MainViewControllerTests.swift */,
 				498A5C8F266646250034221B /* WebViewControllerTests.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		498A5C92266647230034221B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				498A5C6D266630660034221B /* MainViewController.swift */,
+				498A5C7D266634240034221B /* WebViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

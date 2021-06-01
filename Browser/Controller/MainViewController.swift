@@ -73,7 +73,7 @@ extension MainViewController
         requestTextField.keyboardType = .asciiCapable
         requestTextField.layer.borderWidth = 2
         requestTextField.layer.cornerRadius = cornerRadius
-        requestTextField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        requestTextField.layer.borderColor = #colorLiteral(red: 0.168627451, green: 0.3921568627, blue: 0.7725490196, alpha: 1)
         requestTextField.layer.shadowOpacity = 1
         requestTextField.layer.shadowRadius = 4.0
         requestTextField.layer.shadowColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1)
@@ -91,7 +91,7 @@ extension MainViewController
             return textField.layer.borderColor = #colorLiteral(red: 0.9882510304, green: 0.3398481607, blue: 0.01567719691, alpha: 1)
         }
         
-        textField.layer.borderColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        textField.layer.borderColor = #colorLiteral(red: 0.168627451, green: 0.3921568627, blue: 0.7725490196, alpha: 1)
         textForRequest = textField.text ?? "text doesn't exist"
     }
 }
@@ -109,7 +109,7 @@ extension MainViewController
         
         let loginButton = UIButton(frame: CGRect(x: 20, y: heightOfView * 0.78, width: widthOfElement, height: heightOfElement))
         loginButton.setTitle("Go", for: .normal)
-        loginButton.backgroundColor = #colorLiteral(red: 0.3333333333, green: 0.631372549, blue: 0.537254902, alpha: 1)
+        loginButton.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.3921568627, blue: 0.7725490196, alpha: 1)
         loginButton.layer.cornerRadius = cornerRadius
         loginButton.layer.shadowOpacity = 1
         loginButton.layer.shadowRadius = 4.0
