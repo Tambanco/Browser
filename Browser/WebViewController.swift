@@ -30,7 +30,10 @@ class WebViewController: UIViewController, WKUIDelegate {
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
         
+        webView.allowsBackForwardNavigationGestures = true
+        
         confugureNavBar()
+        confugureToolBar()
     }
 }
 
@@ -53,6 +56,13 @@ extension WebViewController {
 
     @objc func doneButtonTapped() {
         dismiss(animated: true, completion: nil)
+    }
+}
+
+// MARK: - ToolBar configurator
+extension WebViewController {
+    func confugureToolBar() {
+        
     }
 }
 
