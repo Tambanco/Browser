@@ -112,9 +112,9 @@
 		498A5C84266645CE0034221B /* BrowserTests */ = {
 			isa = PBXGroup;
 			children = (
+				498A5C91266646300034221B /* Controller */,
 				498A5C85266645CE0034221B /* BrowserTests.swift */,
 				498A5C87266645CE0034221B /* Info.plist */,
-				498A5C91266646300034221B /* Controller */,
 			);
 			path = BrowserTests;
 			sourceTree = "<group>";

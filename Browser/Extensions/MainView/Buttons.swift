@@ -16,7 +16,7 @@ extension MainViewController {
         let widthOfElement: CGFloat = widthOfView - 40.0
         let cornerRadius: CGFloat = 10
         
-        let loginButton = UIButton(frame: CGRect(x: 20, y: heightOfView * 0.78, width: widthOfElement, height: heightOfElement))
+        let loginButton = UIButton(frame: CGRect(x: 20, y: heightOfView * 0.85, width: widthOfElement, height: heightOfElement))
         loginButton.setTitle("Go", for: .normal)
         loginButton.backgroundColor = #colorLiteral(red: 0.168627451, green: 0.3921568627, blue: 0.7725490196, alpha: 1)
         loginButton.layer.cornerRadius = cornerRadius

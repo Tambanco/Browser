@@ -16,7 +16,7 @@ extension MainViewController {
         let widthOfElement: CGFloat = widthOfView - 40.0
         let cornerRadius: CGFloat = 10
         
-        let requestTextField = UITextField(frame: CGRect(x: 20, y: heightOfView * 0.7, width: widthOfElement, height: heightOfElement))
+        let requestTextField = UITextField(frame: CGRect(x: 20, y: heightOfView * 0.77, width: widthOfElement, height: heightOfElement))
         requestTextField.placeholder = "https://"
         requestTextField.leftView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: requestTextField.frame.height))
         requestTextField.leftViewMode = .always
